@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- <script src="background.js" type="module"></script> -->
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header-title {
+            background-color: cadetblue;
+            color: antiquewhite;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-title">
+        <h1>Cookies Crawler and Violations Detection</h1>
+    </div>
+    <div class="container">
+        <div class="d-flex">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="dashboard-page">Cookies list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="violation-page">Violations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="setting-page">Setting</a>
+                </li>
+            </ul>
+            <div class="table-responsive flex-fill">
+                <!-- <div style="width: 800px;"><canvas id="acquisitions"></canvas></div> -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <!-- <th scope="col">number</th> -->
+                            <th scope="col">Violations</th>
+                            <!-- <th scope="col">Description</th> -->
+                            <th scope="col">detected</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cookies-table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="./chart.js-4.4.2/package/dist/chart.umd.js"></script> -->
+    <script src="../script/violations.js"></script>
+    <!-- <script src="./chart.js"></script> -->
+</body>
+
+</html>

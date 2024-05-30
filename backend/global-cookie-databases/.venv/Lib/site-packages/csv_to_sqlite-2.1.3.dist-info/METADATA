@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: csv-to-sqlite
+Version: 2.1.3
+Summary: A script that processes the input CSV files and copies them into a SQLite database.
+Home-page: https://github.com/zblesk/csv-to-sqlite
+Keywords: csv sqlite conversion copy tool
+Author: Ladislav Benc
+Author-email: ladislav.benc@proton.me
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Dist: click
+
+csv-to-sqlite
+=============
+
+This is a simple, **datatype-guessing** script that takes CSV files as input and copies their contents into a SQLite database.  
+(Column names are taken from the headers (first row) in the csv file.)  
+Intended for **Python 3**. (I know it *did* run on Py2 as some people tried, but I haven't tested it.)
+
+## Links 
+
+* [Source on GitHub](https://github.com/zblesk/csv-to-sqlite) 
+* [PyPI page](https://pypi.org/project/csv-to-sqlite/) 
+* [Introductory blog post with basic intro + a how-to](http://zblesk.net/blog/csv-to-sqlite/)
+* [Other related blog posts](https://zblesk.net/blog/tag/csv-to-sqlite/) 
+
+## Overview
+
+Installs via 
+
+```
+ pip install csv-to-sqlite
+```
+
+To find out more, run
+
+```
+ csv-to-sqlite --help
+```
+
+If you've installed the package as a dependency for your own script, you can use it like this:
+
+```python
+import csv_to_sqlite 
+
+# all the usual options are supported
+options = csv_to_sqlite.CsvOptions(typing_style="full", encoding="windows-1250") 
+input_files = ["abilities.csv", "moves.csv"] # pass in a list of CSV files
+csv_to_sqlite.write_csv(input_files, "output.sqlite", options)
+```
+
+

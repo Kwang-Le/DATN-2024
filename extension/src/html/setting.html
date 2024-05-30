@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- <script src="background.js" type="module"></script> -->
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header-title {
+            background-color: cadetblue;
+            color: antiquewhite;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-title">
+        <h1>Cookies Crawler and Violations Detection</h1>
+    </div>
+    <div class="container">
+        <div class="d-flex">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="dashboard-page">Cookies list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="violation-page">Violations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="setting-page">Setting</a>
+                </li>
+            </ul>
+            <div class="d-flex flex-column">
+                <div class="form-check form-switch" style="margin-top: 10px;margin-left: 10px;">
+                    <label class="form-check-label" for="flexSwitchCookieBannerDetection">Enable Real time cookie banner
+                        detection</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCookieBannerDetection">
+                </div>
+                <div class="form-check form-switch" style="margin-top: 10px;margin-left: 10px;">
+                    <label class="form-check-label" for="flexSwitchAutoDetect">Automatically scan website</label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchAutoDetect">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="./chart.js-4.4.2/package/dist/chart.umd.js"></script> -->
+    <script src="../script/setting.js"></script>
+    <!-- <script src="./chart.js"></script> -->
+</body>
+
+</html>

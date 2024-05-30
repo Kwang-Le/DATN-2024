@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-eval';">
+  <script src="../../script/extension/background.js" type="module"></script>
+  <link href="../../bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container" style="min-width: 200px;">
+    <h1 style="text-align: center;">Cookies and violations detection</h1>
+    <div class="btn-group d-flex flex-column justify-content-center">
+      <button type="button" class="btn btn-primary scan-website mb-2">Scan current website</button>
+      <button type="button" class="btn btn-primary scan-cmp mb-2">Check CMP usage</button>
+      <button type="button" class="btn btn-primary setting-btn mb-2">Setting</button>
+    </div>
+    <span id="message" hidden></span>
+    <div class="btn-group d-flex flex-column justify-content-center">
+      <button type="button" class="btn btn-primary view-detail mb-2" id="view-detail-btn" hidden>View Details</button>
+    </div>
+
+  </div>
+  <script src="../../onnxjs/dist/onnx.min.js"></script>
+  <script src="../../ort/dist/ort.all.js"></script>
+  <script src="../../bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
